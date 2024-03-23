@@ -4,7 +4,7 @@
   "description": "My-Tube is a free video sharing website that makes it easy to watch online videos, where users can watch, like, share, comment and upload their own videos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "javascript",
@@ -14,5 +14,9 @@
     "mongoose"
   ],
   "author": "Md. Imran Mir",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
 }
