@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "My-Tube is a free video sharing website that makes it easy to watch online videos, where users can watch, like, share, comment and upload their own videos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "expressjs",
+    "mongidb",
+    "mongoose"
+  ],
+  "author": "Md. Imran Mir",
+  "license": "ISC"
+}
