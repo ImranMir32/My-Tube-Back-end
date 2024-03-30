@@ -14,10 +14,12 @@ const registerUser = asyncHandler(async (req, res) => {
   // remove password and refresh token field from response
   // check for user creation
   // return res
-
+  console.log(req.body.fullName);
   const { username, email, fullName, password } = req.body;
   if (
-    [username, email, fullName, password].some((field) => field?.trim() === "")
+    [username, email, fullName, password].some((field) => {
+      return field?.trim() === "" || field === undefined;
+    })
   ) {
     throw new ApiError(400, "All fields are required");
   }
@@ -29,7 +31,8 @@ const registerUser = asyncHandler(async (req, res) => {
   if (existedUser) {
     throw new ApiError(409, "User with email or username already exists");
   }
-  console.log(req.files);
+
+  console.log("->", req.files);
   const avatarLocalPath = req.files?.avatar[0]?.path;
   // const coverImageLocalPath = req.files?.coverImage[0]?.path;
 
